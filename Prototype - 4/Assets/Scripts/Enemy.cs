@@ -21,5 +21,10 @@ public class Enemy : MonoBehaviour
         Vector3 lookDirection = player.transform.position - transform.position;
         //For ML agents i will need input like player to multiply by
         enemyRb.AddForce(lookDirection.normalized * speed);
+
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }

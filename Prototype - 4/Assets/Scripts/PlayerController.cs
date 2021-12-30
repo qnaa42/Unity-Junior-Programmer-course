@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour
     private GameObject focalPoint;
 
     private Rigidbody playerRb;
+
+    private SpawnManager spawnManager;
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("Focal Point");
+        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
             powerUpIndicator.gameObject.SetActive(true);
             hasPowerUp = true;
             StartCoroutine(PowerupCountdownRountine());
+            spawnManager.powerUpArray[0] = null;
         }
     }
 

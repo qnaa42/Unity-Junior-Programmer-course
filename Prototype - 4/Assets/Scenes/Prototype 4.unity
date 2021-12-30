@@ -230,6 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4969521680475967615, guid: 9e879bac296ff54478c5d43b60f412dc, type: 3}
+  powerUpPrefab: {fileID: 0}
+  powerUpArray: []
 --- !u!4 &868576654
 Transform:
   m_ObjectHideFlags: 0
@@ -814,6 +816,10 @@ PrefabInstance:
     - target: {fileID: 7047934124369404326, guid: 9e9492ccd5c0d6344a16cd83681cdc10, type: 3}
       propertyPath: m_Name
       value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047934124369404326, guid: 9e9492ccd5c0d6344a16cd83681cdc10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9492ccd5c0d6344a16cd83681cdc10, type: 3}
